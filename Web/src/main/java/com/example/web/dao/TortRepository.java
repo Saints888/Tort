@@ -1,5 +1,6 @@
-package com.example.web.controller;
+package com.example.web.dao;
 
+import com.example.web.controller.TortEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
