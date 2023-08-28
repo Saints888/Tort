@@ -58,15 +58,22 @@ public class TortInfo {
     public void setPrice(int price) {
         this.price = price;
     }
+    // Метод setPrice()
+    // Устанавливает значение поля price
 
 
     public int getWeight() {
         return weight;
     }
+    // Метод getWeight()
+// Возвращает значение поля weight
 
     public void setWeight(int weight) {
         this.weight = weight;
     }
+
+    // Метод setWeight()
+// Устанавливает значение поля weight
 
     /**
      * Создание id города на основе названия и хэшкода торта
@@ -74,6 +81,8 @@ public class TortInfo {
     public void createId() {
     this.id = "" + hashCode();
     }
+    // Комментарий к методу createId()
+// Создание идентификатора города на основе названия и хеш-кода торта
 
     @Override
     public boolean equals(Object ob) {
@@ -84,10 +93,16 @@ public class TortInfo {
         return id.equals(info.id) && name.equalsIgnoreCase(info.name);
     }
 
+    // Переопределение метода equals()
+// Проверка равенства объектов по их id и name
+// Если объекты равны по этим полям, то возвращается true, иначе false
+
     @Override
     public int hashCode() {
         return Objects.hash(name.toLowerCase());
     }
+    // Переопределение метода hashCode()
+// Вычисление хеш-кода объекта на основе name, приведенного к нижнему регистру
 
     @Override
     public String toString () {
@@ -100,6 +115,7 @@ public class TortInfo {
 
     }
 }
-
+// Переопределение метода toString()
+// Формирование строки, содержащей значения всех полей класса
 
 
