@@ -1,6 +1,5 @@
 package com.example.web.dao;
 
-import com.example.web.controller.Tort;
 import com.example.web.err.CustomException;
 import com.example.web.err.Errors;
 import com.example.web.service.TortInfo;

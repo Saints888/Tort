@@ -167,7 +167,29 @@ public class HelloController {
 
     @GetMapping("/tort/delete")
             public ModelAndView getDeleteTortView() {
-        List<TortInfo> tortInfos = tortService.gettAll();
+        List<TortInfo> torts = tortService.gettAll();
 
         ModelAndView view = new ModelAndView();
+        view.setViewName("/deleteTortBS.jsp");
+        view.addObject("AllTorts", torts);
+        if (torts.size() == 0) {
+            view.addObject("emptyMessage", "База данных пуста!");
+
+
+            }
+            return view;
+        }
+
+        @PostMapping("tort/delete")
+                public ModelAndView deleteTort(@RequestParam ("id")
+        String tortId) {
+
+        try {
+            tortService.delete(tortId);
+            return getDeleteTortView();
+        }catch (Exception ex) {
+            return getDeleteTortView();
+        }
+        }
+        }
 }
